@@ -1,6 +1,6 @@
 # Assembly revert
 
-Reverting transactions using inline assembly can be more gas-efficient than using the high-level Solidity `revert` or `require` statement. In this guide, we’ll explore how the different types of reverts in Solidity work under the hood by simulating their implementations in assembly.
+Reverting transactions using inline assembly can be more gas-efficient than using the high-level Solidity `revert` or `require` statement. In this guide, we’ll explore how the different types of reverts in Solidity work under the hood b simulating their implementations in assembly.
 
 The example below shows that the `revert` statement in the assembly version reduces the gas cost from 157 gas to 126 gas, saving 31 gas:
 
@@ -179,7 +179,7 @@ assembly {
 
 The animation below shows how this overwrite happens:
 
-[Mstore8Scene.mp4](Assembly%20revert%20f75176e4625e49c68bf53cb92aefe9fa/Mstore8Scene.mp4)
+<video src="https://pub-32882f615aa84e4a94e1279ccf3ab85a.r2.dev/Assembly%20revert%20f75176e4625e49c68bf53cb92aefe9fa/Mstore8Scene.mp4" type="video/mp4" autoplay loop muted controls></video>
 
 This demonstrates that the 31 padded zeros of `mstore` actually alters the contents of memory.
 
@@ -475,7 +475,7 @@ contract A {
 
 This is how Solidity will store the revert data in memory and the result of the revert data will be returned eventually.
 
-[Memoryanim.mp4](https://pub-32882f615aa84e4a94e1279ccf3ab85a.r2.dev/Assembly%20revert%20f75176e4625e49c68bf53cb92aefe9fa/Memoryanim.mp4)
+<video src="https://pub-32882f615aa84e4a94e1279ccf3ab85a.r2.dev/Assembly%20revert%20f75176e4625e49c68bf53cb92aefe9fa/Memoryanim.mp4" type="video/mp4" autoplay loop muted controls></video>
 
 ## 3. Revert with a reason in assembly
 
